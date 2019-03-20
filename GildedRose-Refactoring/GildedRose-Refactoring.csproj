@@ -81,6 +81,14 @@
   <ItemGroup>
     <Compile Include="ApprovalTest.cs" />
     <Compile Include="GildedRose.cs" />
+    <Compile Include="Refactoring\ItemExtensions.cs" />
+    <Compile Include="Refactoring\Strategies\AgedBrie.cs" />
+    <Compile Include="Refactoring\Strategies\BackstagePasses.cs" />
+    <Compile Include="Refactoring\Strategies\Conjured.cs" />
+    <Compile Include="Refactoring\Strategies\Default.cs" />
+    <Compile Include="Refactoring\IItemQualityUpdateStrategy.cs" />
+    <Compile Include="Refactoring\ItemQualityUpdateStrategyFactory.cs" />
+    <Compile Include="Refactoring\Strategies\DoNothing.cs" />
     <Compile Include="Tests\AgedBrieTest.cs" />
     <Compile Include="Tests\BackstagePassesTest.cs" />
     <Compile Include="Item.cs" />

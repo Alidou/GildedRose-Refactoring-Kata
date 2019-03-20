@@ -35,5 +35,19 @@ namespace GildedRose_Refactoring.Tests
             Assert.IsTrue(items[0].Quality > initialQuality);
             Assert.AreEqual(50, items[0].Quality);
         }
+
+        [Test]
+        public void Once_sell_by_date_has_passed_Quality_increases_twice_as_fast()
+        {
+            int initialQuality = 1;
+            int initialSellIn = -1;
+            int numberOfDays = 1;
+
+            IList<Item> items = new List<Item> { new Item { Name = AgedBrie, SellIn = initialSellIn, Quality = initialQuality } };
+            GildedRose app = new GildedRose(items);
+            app.AdvanceTime(numberOfDays);
+
+            Assert.AreEqual(3, items[0].Quality);
+        }
     }
 }
